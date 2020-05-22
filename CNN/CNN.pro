@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         layer_dense.cpp \
-        main.cpp
+        main.cpp \
+        random_value_generator.cpp
 
 HEADERS += \
-    layer_dense.h
+    layer_dense.h \
+    random_value_generator.h
