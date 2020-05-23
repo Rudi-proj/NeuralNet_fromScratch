@@ -3,6 +3,8 @@
 Random_Value_Generator::Random_Value_Generator()
 {
     generator.seed(time(NULL));
+    //For Testing:
+    //generator.seed(666);
 }
 
 double Random_Value_Generator::generate_rand(double low, double high){

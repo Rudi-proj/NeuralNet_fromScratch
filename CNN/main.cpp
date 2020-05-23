@@ -7,6 +7,22 @@ using namespace std;
 int main()
 {
 
+    //Testing forward function
+    Layer_Dense l(2,2);
+    l.print_matrix(l.get_weights());
+    vector<vector<double>> X;
+    X.resize(2);
+    X[0].resize(2);
+    X[1].resize(2);
+    X[0][0] = 1;
+    X[0][1] = 2;
+    X[1][0] = 3;
+    X[1][1] = 4;
+    l.print_matrix(X);
+    l.print_matrix(l.forward(X));
+
+    //Testing dot product
+    /*
     //Testing dot product
     vector<vector<double>> matrix1;
     vector<vector<double>> matrix2;
@@ -37,8 +53,7 @@ int main()
 
     Layer_Dense l(2,2);
     l.print_matrix(l.dot_product(matrix1,matrix2));
-
-
+    */
 
     //Testing weights matrix
     /*

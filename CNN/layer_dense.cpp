@@ -25,8 +25,19 @@ Layer_Dense::Layer_Dense(uint32_t n_inputs, uint32_t n_neurons):n_inputs(n_input
 
 vector<vector<double>> Layer_Dense::forward(vector<vector<double>> inputs){
 
-    //platzhalter
     vector<vector<double>> output;
+
+    if(inputs[0].size() != weights.size()){
+        cout << "Error! wrong input size" << "\n";
+    }
+
+    output.resize(inputs[0].size());
+    for(uint32_t i=0;i<inputs[0].size();i++){
+        output[i].resize(weights.size());
+    }
+
+    output = dot_product(inputs, weights);
+
     return output;
 }
 
@@ -39,7 +50,7 @@ vector<vector<double>> Layer_Dense::dot_product(vector<vector<double>> matrix1, 
     }
 
     double value_dot_product = 0;
-
+    //evaluate dot product;
     for(uint32_t i=0;i<output.size();i++){
         for(uint32_t j=0;j<output[0].size();j++){
             for(uint32_t p=0;p<matrix2.size();p++){
@@ -62,7 +73,6 @@ void Layer_Dense::print_matrix(vector<vector<double>> matrix){
     }
 }
 
-
 void Layer_Dense::print_weights(){
     //prints the weights matrix
     for(uint32_t i=0;i<n_inputs;i++){
@@ -78,4 +88,8 @@ void Layer_Dense::print_biases(){
         cout << biases[i] << " ";
     }
     cout << "\n";
+}
+
+vector<vector<double>> Layer_Dense::get_weights(){
+    return this->weights;
 }
