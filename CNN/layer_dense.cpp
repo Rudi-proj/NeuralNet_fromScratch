@@ -38,8 +38,28 @@ vector<vector<double>> Layer_Dense::dot_product(vector<vector<double>> matrix1, 
         output[i].resize(matrix2[0].size());
     }
 
+    double value_dot_product = 0;
+
+    for(uint32_t i=0;i<output.size();i++){
+        for(uint32_t j=0;j<output[0].size();j++){
+            for(uint32_t p=0;p<matrix2.size();p++){
+                value_dot_product += matrix1[i][p]*matrix2[p][i];
+            }
+            output[i][j] = value_dot_product;
+            value_dot_product = 0;
+        }
+    }
 
     return output;
+}
+
+void Layer_Dense::print_matrix(vector<vector<double>> matrix){
+    for(uint32_t i=0;i<matrix.size();i++){
+        for(uint32_t j=0;j<matrix[0].size();j++){
+            cout << matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
 }
 
 

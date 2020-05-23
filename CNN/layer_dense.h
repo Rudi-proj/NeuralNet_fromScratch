@@ -18,6 +18,7 @@ public:
     //Testing functions
     void print_weights();
     void print_biases();
+    void print_matrix(vector<vector<double>> matrix);
 
 private:
 
