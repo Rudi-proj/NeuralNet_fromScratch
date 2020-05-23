@@ -7,22 +7,24 @@ using namespace std;
 int main()
 {
 
-    /*
+
+
+
     //Testing forward function
-    Layer_Dense l(2,2);
+    /*
+    Layer_Dense l(4,3);
     l.print_matrix(l.get_weights());
     vector<vector<double>> X;
-    X.resize(2);
-    X[0].resize(2);
-    X[1].resize(2);
-    X[0][0] = 1;
-    X[0][1] = 2;
-    X[1][0] = 3;
-    X[1][1] = 4;
+    vector<double> row1;
+    row1.push_back(1);
+    row1.push_back(2);
+    row1.push_back(3);
+    row1.push_back(4);
+    X.push_back(row1);
+
     l.print_matrix(X);
     l.print_matrix(l.forward(X));
     */
-
 
     //Testing dot product
     /*
