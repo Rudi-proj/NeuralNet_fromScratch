@@ -22,3 +22,13 @@ Layer_Dense::Layer_Dense(uint32_t n_inputs, uint32_t n_neurons):n_inputs(n_input
         biases[i] = 0;
     }
 }
+
+void Layer_Dense::print_weights(){
+    //prints the weights matrix
+    for(uint32_t i=0;i<n_inputs;i++){
+        for(uint32_t j=0;j<n_neurons;j++){
+            cout << weights[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
