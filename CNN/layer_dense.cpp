@@ -39,8 +39,6 @@ vector<vector<double>> Layer_Dense::dot_product(vector<vector<double>> matrix1, 
     }
 
 
-
-
     return output;
 }
 
