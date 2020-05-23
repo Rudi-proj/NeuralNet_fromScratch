@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+
 #ifndef LAYER_DENSE_H
 #define LAYER_DENSE_H
 

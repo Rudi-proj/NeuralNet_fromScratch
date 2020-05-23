@@ -4,8 +4,8 @@ Random_Value_Generator::Random_Value_Generator()
 {
 
 }
-template<typename T>
-T Random_Value_Generator::generate_rand(T low, T high){
-    //generate random Value
 
+double Random_Value_Generator::generate_rand(double low, double high){
+    std::uniform_real_distribution<double> distibution(low, high);
+    return distibution(generator);
 }
