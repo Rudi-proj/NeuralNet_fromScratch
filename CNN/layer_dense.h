@@ -12,6 +12,10 @@ class Layer_Dense
 {
 public:
     Layer_Dense(uint32_t n_inputs, uint32_t n_neurons);   
+    vector<vector<double>> forward(vector<vector<double>> inputs);
+    vector<vector<double>> dot_product(vector<vector<double>> matrix1, vector<vector<double>> matrix2);
+
+    //Testing functions
     void print_weights();
     void print_biases();
 
