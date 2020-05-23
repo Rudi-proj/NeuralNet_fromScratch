@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
 
+    /*
     //Testing forward function
     Layer_Dense l(2,2);
     l.print_matrix(l.get_weights());
@@ -20,10 +21,11 @@ int main()
     X[1][1] = 4;
     l.print_matrix(X);
     l.print_matrix(l.forward(X));
+    */
+
 
     //Testing dot product
     /*
-    //Testing dot product
     vector<vector<double>> matrix1;
     vector<vector<double>> matrix2;
     //Matrix1
@@ -40,13 +42,16 @@ int main()
     //Matrix2
     vector<double> row21;
     row21.push_back(1);
+    row21.push_back(0);
     row21.push_back(1);
     vector<double> row22;
     row22.push_back(2);
-    row22.push_back(2);
+    row22.push_back(1);
+    row22.push_back(1);
     vector<double> row23;
     row23.push_back(3);
-    row23.push_back(3);
+    row23.push_back(2);
+    row23.push_back(1);
     matrix2.push_back(row21);
     matrix2.push_back(row22);
     matrix2.push_back(row23);
