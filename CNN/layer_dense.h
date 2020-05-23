@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <random_value_generator.h>
 
 
 #ifndef LAYER_DENSE_H
@@ -17,7 +18,8 @@ public:
 
 private:
     vector<vector<double>> weights;
-
+    vector<double> biases;
+    Random_Value_Generator r1;
 
 };
 

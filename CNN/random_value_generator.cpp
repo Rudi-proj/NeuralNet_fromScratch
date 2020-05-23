@@ -2,7 +2,6 @@
 
 Random_Value_Generator::Random_Value_Generator()
 {
-
 }
 
 double Random_Value_Generator::generate_rand(double low, double high){
