@@ -1,4 +1,5 @@
 #include <random>
+#include <time.h>
 
 #ifndef RANDOM_VALUE_GENERATOR_H
 #define RANDOM_VALUE_GENERATOR_H

@@ -32,3 +32,10 @@ void Layer_Dense::print_weights(){
         cout << "\n";
     }
 }
+
+void Layer_Dense::print_biases(){
+    for(uint32_t i=0;i<n_neurons;i++){
+        cout << biases[i] << " ";
+    }
+    cout << "\n";
+}

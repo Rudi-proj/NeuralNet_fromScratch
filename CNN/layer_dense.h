@@ -13,6 +13,7 @@ class Layer_Dense
 public:
     Layer_Dense(uint32_t n_inputs, uint32_t n_neurons);   
     void print_weights();
+    void print_biases();
 
 private:
 

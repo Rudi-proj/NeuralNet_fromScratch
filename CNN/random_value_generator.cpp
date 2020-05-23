@@ -2,6 +2,7 @@
 
 Random_Value_Generator::Random_Value_Generator()
 {
+    generator.seed(time(NULL));
 }
 
 double Random_Value_Generator::generate_rand(double low, double high){

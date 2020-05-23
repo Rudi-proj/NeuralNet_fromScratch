@@ -8,10 +8,13 @@ int main()
 {
 
     //Testing weights matrix
-
     Layer_Dense l(4,3);
     l.print_weights();
+    cout << "\n" << "\n";
 
+    //Testing biases
+    l.print_biases();
+    cout << "\n" << "\n";
 
 
     //Testing the random value generator
