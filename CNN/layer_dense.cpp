@@ -1,5 +1,16 @@
 #include "layer_dense.h"
 
+vector<double> operator+(vector<double> vec1, vector<double> vec2){
+
+    if(vec1.size() != vec2.size()) cout << "Error overloaded + wrong sizes";
+    vector<double> out;
+    out.resize(vec1.size());
+    for(uint32_t i=0;i<vec1.size();i++){
+        out.push_back(vec1[i]+vec2[i]);
+    }
+    return out;
+}
+
 Layer_Dense::Layer_Dense(uint32_t n_inputs, uint32_t n_neurons):n_inputs(n_inputs), n_neurons(n_neurons)
 {
     //resize weigths vector
@@ -37,6 +48,11 @@ vector<vector<double>> Layer_Dense::forward(vector<vector<double>> inputs){
     }
 
     output = dot_product(inputs, weights);
+
+    //adding the biases
+    for(uint32_t i=0;i<output.size();i++){
+        output[i] = output[i] + biases;
+    }
 
     return output;
 }

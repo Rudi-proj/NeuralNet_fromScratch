@@ -12,14 +12,13 @@ int main()
 
     //Testing forward function
     /*
-    Layer_Dense l(4,3);
+    Layer_Dense l(2,2);
     l.print_matrix(l.get_weights());
     vector<vector<double>> X;
     vector<double> row1;
     row1.push_back(1);
     row1.push_back(2);
-    row1.push_back(3);
-    row1.push_back(4);
+    row1.shrink_to_fit();
     X.push_back(row1);
 
     l.print_matrix(X);
