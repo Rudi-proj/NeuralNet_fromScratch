@@ -1,5 +1,8 @@
+#include <iostream>
+#include <vector>
 #ifndef ACTIVATIONFUNCTION_H
 #define ACTIVATIONFUNCTION_H
+
 
 namespace ActivationFunction {
 
@@ -8,5 +11,11 @@ namespace ActivationFunction {
     double Sigmoid(double input); //soft step
 
 }
+
+class Activation_ReLU{
+
+    std::vector<double> forward(std::vector<double> inputs);
+};
+
 
 #endif // ACTIVATIONFUNCTION_H
