@@ -1,14 +1,24 @@
 #include <iostream>
 #include <random_value_generator.h>
 #include <layer_dense.h>
+#include <ActivationFunction.h>
 
 using namespace std;
 
 int main()
 {
 
-
-
+    //Testing Activation_ReLU
+    /*
+    vector<double> in;
+    in.push_back(3);
+    in.push_back(-0.00001);
+    in.push_back(0.0001);
+    Activation_ReLU Relu;
+    Layer_Dense L1(2,2);
+    vector<double> out = Relu.forward(in);
+    L1.print_vector(out);
+    */
 
     //Testing forward function
     /*

@@ -13,7 +13,7 @@ namespace ActivationFunction {
 }
 
 class Activation_ReLU{
-
+public:
     std::vector<double> forward(std::vector<double> inputs);
 };
 

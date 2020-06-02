@@ -109,3 +109,21 @@ void Layer_Dense::print_biases(){
 vector<vector<double>> Layer_Dense::get_weights(){
     return this->weights;
 }
+
+
+void Layer_Dense::print_vector(vector<double> vec){
+    for(uint32_t i=0;i<vec.size();i++){
+        cout << vec[i] << "\n";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
